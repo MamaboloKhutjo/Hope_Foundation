@@ -1,0 +1,396 @@
+/*resetting the margins and peddings for all elements on the website*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* updating the layout of the header using Flexbox for layout*/
+header {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    /*centering the items in the header*/
+    padding: 5px 10px;
+    /*Spacing the items in the header*/
+    justify-content: space-between;
+    /*Pushes the logo to the left and the navigation to the right*/
+}
+
+/* Logo and Foundation text container */
+.logo-container {
+    display: flex;
+    /* Aligning the logo and the logo text side by side */
+    align-items: center;
+    /* Centers the image and text vertically */
+}
+
+/* resizing the img in the header */
+.logo-container img {
+    width: 10%;
+    /* Adjusts the size of the logo */
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+/* styling for the Foundation text next to the logo */
+.logo-container h1 {
+    color: white;
+    /* Makes the text white */
+    font-size: 1.5rem;
+    /* Adjust the font size as needed */
+}
+
+
+
+/*Editing how the navigation bar will look*/
+.navbar {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*Editing how the text on the navigation bar looks*/
+.navbar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between icon and text */
+    color: white;
+    text-decoration: none;
+    /* Removes the underline under the hyperlinks */
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.navbar a:hover {
+    background-color: #9d1a0e
+}
+
+
+body {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgb(43, 42, 42);
+    border-radius: 8px;
+
+}
+
+main h1 {
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+main h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    /* Remove default bullet points */
+    padding: 0;
+    margin: 15px 0;
+}
+
+ul li {
+    margin: 10px 0;
+    color: #333;
+    /* List item text color */
+    text-align: center;
+    font-size: medium;
+}
+
+ul li div {
+    font-weight: bolder;
+    color: #0400e7;
+    /* Emphasized text color */
+    text-align: center;
+    font-size: large;
+}
+
+
+.featured-stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two-column layout for larger screens */
+    gap: 40px;
+    /* Space between stories */
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.story {
+    background-color: #fdfdfd;
+    /* Subtle background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Softer shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story:hover {
+    transform: translateY(-10px);
+    /* Slight movement on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow on hover */
+}
+
+.story h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1F3A93;
+    /* Consistent color scheme with your brand */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1F3A93;
+    /* Stylish underline for headings */
+    padding-bottom: 10px;
+}
+
+.story p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    /* Softer text color for readability */
+}
+
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.team-member h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Hover effect */
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    object-fit: contain;
+}
+
+footer {
+    background-color: #111;
+    /* Dark footer background */
+    padding: 20px 0;
+    /* Vertical padding for the footer */
+}
+
+footer p {
+    color: white;
+    /* White text in footer */
+    text-align: center;
+    /* Centered text */
+    font-weight: bolder;
+    /* Bolder text */
+    margin: 10px 0;
+    /* Spacing between footer paragraphs */
+}
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 20px auto;
+    /* Center the form */
+    padding: 10px;
+    background-color: #fff;
+    /* White background for the form */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.contact-form input {
+    margin: 10px 0;
+    /* Space between fields */
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Border styling */
+    border-radius: 5px;
+    /* Rounded edges */
+    display: flex;
+}
+
+.contact-form textarea {
+    margin: 10px 0;
+    /* Space between fields */
+    padding: 20px 130px;
+    border: 1px solid #ccc;
+    /* Border styling */
+    border-radius: 5px;
+    /* Rounded edges */
+}
+
+.contact-form button {
+    background-color: #9d1a0e;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 10px;
+    border-radius: 5px;
+    /* Rounded edges */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+.contact-form button:hover {
+    background-color: #c20000;
+    /* Darker shade on hover */
+}
+
+footer a {
+    color: white;
+    /* White links in footer */
+    text-decoration: none;
+    /* Removes the underline */
+}
+
+.footernav {
+    display: flex;
+    justify-content: center;
+    /* Center footer navigation */
+    gap: 15px;
+    /* Space between footer navigation links */
+}
+
+.footernav a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+
+@media (max-width: 960px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+    }
+
+    /* Stacking logo and text vertically */
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjusting logo size */
+    .logo-container img {
+        width: 60px;
+        /* smaller logo on small screens */
+        aspect-ratio: auto;
+    }
+
+    /* Reducing padding in the navigation bar */
+    .navbar a {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Adjusting header layout for better spacing */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Reducing font size for better readability */
+    main h2,
+    main h3 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+
+    .featured-stories {
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+    }
+
+    /* Stack team members on smaller screens */
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjusting the width of each team member container */
+    .team-member {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .footernav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footernav a {
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+
+    .contact-form {
+        width: 90%;
+        padding: 15px;
+    }
+}
